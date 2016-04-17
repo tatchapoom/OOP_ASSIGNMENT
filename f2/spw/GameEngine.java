@@ -11,6 +11,6 @@ import java.util.Iterator;
 import javax.swing.Timer;
 
 
-public class GameEngine implements  GameReporter{
+public class GameEngine {
 	
 }
