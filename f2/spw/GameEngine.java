@@ -16,7 +16,7 @@ public class GameEngine implements KeyListener, GameReporter{
 		
 	private ArrayList<Enemy> enemies = new ArrayList<Enemy>();	
 	private SpaceShip v;	
-	
+	private int count = 0;
 	private Timer timer;
 	private int life = 9;
 	private long score = 0;
@@ -63,9 +63,15 @@ public class GameEngine implements KeyListener, GameReporter{
 				e_iter.remove();
 				gp.sprites.remove(e);
 				score += 100;
+                count++;
+                if( count%100 == 0){                                    
+                    life++;
+                    life++;
+                    life++;
+                }				
 			}
 		}
-		
+
 		gp.updateGameUI(this);
 		
 		Rectangle2D.Double vr = v.getRectangle();
